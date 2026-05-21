@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+        .hero { background: linear-gradient(135deg, #1a1a5e 0%, #6c3fc5 100%);
+                color: #fff; padding: 48px 40px; text-align: center; }
+        .hero h1 { font-size: 32px; font-weight: 900; margin-bottom: 10px; }
+        .hero p  { font-size: 16px; opacity: 0.85; max-width: 620px; margin: 0 auto 16px; }
+        .hero .tagline { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; }
+        .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+        .badge  { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+                  color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 12px; }
+        .section { padding: 40px; max-width: 960px; margin: 0 auto; }
+        h2 { color: #1a1a5e; font-size: 22px; margin-bottom: 20px;
+             border-bottom: 3px solid #6c3fc5; padding-bottom: 8px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px; }
+        .feature-card { background: #f8f9ff; border-left: 4px solid #1a1a5e; padding: 14px 16px; border-radius: 4px; }
+        .feature-card .icon { font-size: 22px; margin-bottom: 6px; }
+        .feature-card h3 { font-size: 13px; color: #1a1a5e; margin-bottom: 4px; }
+        .feature-card p  { font-size: 12px; color: #666; }
+        .step { display: flex; gap: 20px; margin-bottom: 24px; align-items: flex-start; }
+        .step-num { background: linear-gradient(135deg,#1a1a5e,#6c3fc5); color:#fff; width:36px; height:36px;
+                    border-radius:50%; display:flex; align-items:center; justify-content:center;
+                    font-weight:800; font-size:16px; flex-shrink:0; }
+        .step-content h3 { color:#1a1a5e; margin-bottom:6px; font-size:15px; }
+        .step-content p,.step-content li { font-size:13px; color:#555; }
+        .step-content ul { padding-left:18px; margin-top:4px; }
+        .preset-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:16px; }
+        .preset-card { border-radius:6px; padding:12px 16px; text-align:center; font-weight:900;
+                       font-size:18px; letter-spacing:4px; }
+        .screenshot-section { padding:40px; background:#f0f0f0; }
+        .screenshot-section h2 { color:#1a1a5e; font-size:22px; margin-bottom:24px;
+                                  border-bottom:3px solid #6c3fc5; padding-bottom:8px;
+                                  max-width:960px; margin-left:auto; margin-right:auto; }
+        .screenshot-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(440px,1fr));
+                           gap:20px; max-width:960px; margin:0 auto; }
+        .screenshot-card { background:#fff; border-radius:8px; overflow:hidden;
+                           box-shadow:0 2px 12px rgba(0,0,0,0.1); }
+        .screenshot-card img { width:100%; display:block; border-bottom:1px solid #eee; }
+        .screenshot-card .caption { padding:10px 14px; font-size:13px; font-weight:600; color:#1a1a5e; }
+        .cta { text-align:center; padding:40px; background:#f8f9ff; }
+        .cta h2 { color:#1a1a5e; border:none; margin-bottom:10px; }
+        .cta a  { background:linear-gradient(135deg,#1a1a5e,#6c3fc5); color:#fff;
+                  padding:12px 28px; border-radius:6px; text-decoration:none; font-weight:700; display:inline-block; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>PDF Watermark</h1>
+    <p>Add diagonal text watermarks to Invoices, Sale Orders and Purchase Orders. Configure DRAFT, PAID, CONFIDENTIAL or any custom text from Settings.</p>
+    <div class="tagline">by Technical Rajni · Solutions | Automation | Innovation</div>
+    <div class="badges">
+        <span class="badge">Odoo 19</span>
+        <span class="badge">Community &amp; Enterprise</span>
+        <span class="badge">Invoices</span>
+        <span class="badge">Sale Orders</span>
+        <span class="badge">Purchase Orders</span>
+        <span class="badge">Custom Color</span>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">🧾</div>
+            <h3>Invoice Watermark</h3>
+            <p>Add watermark to customer invoices and credit notes automatically when printing.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🛒</div>
+            <h3>Sale Order Watermark</h3>
+            <p>Watermark appears diagonally on Sale Order and Pro Forma invoice PDFs.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🏭</div>
+            <h3>Purchase Order Watermark</h3>
+            <p>Add watermark to Purchase Orders and RFQ PDFs sent to vendors.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">✏️</div>
+            <h3>Custom Text</h3>
+            <p>Set any text per document type — DRAFT, PAID, CONFIDENTIAL, COPY, or anything else.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🎨</div>
+            <h3>Custom Color</h3>
+            <p>Choose watermark color using any hex color code — grey, red, blue, green and more.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚙️</div>
+            <h3>Zero Coding</h3>
+            <p>Configure everything from Settings. Enable/disable per document type independently.</p>
+        </div>
+    </div>
+
+    <div style="margin-top:28px;">
+        <h2>Watermark Presets</h2>
+        <div class="preset-grid">
+            <div class="preset-card" style="background:#fff3f3;color:#cc0000;border:2px solid #cc0000;">DRAFT</div>
+            <div class="preset-card" style="background:#f3fff3;color:#006600;border:2px solid #006600;">PAID</div>
+            <div class="preset-card" style="background:#f3f3ff;color:#000066;border:2px solid #000066;">CONFIDENTIAL</div>
+            <div class="preset-card" style="background:#fff8f3;color:#cc6600;border:2px solid #cc6600;">CANCELLED</div>
+            <div class="preset-card" style="background:#f8f8f8;color:#666;border:2px solid #999;">COPY</div>
+        </div>
+    </div>
+</div>
+
+<div class="screenshot-section">
+    <h2>Screenshots</h2>
+    <div class="screenshot-grid">
+        <div class="screenshot-card">
+            <img src="screen1_settings.png" alt="PDF Watermark Settings"/>
+            <div class="caption">⚙️ Settings — Enable watermark per document type with custom text and color</div>
+        </div>
+        <div class="screenshot-card">
+            <img src="screen2_invoice.png" alt="Invoice Watermark"/>
+            <div class="caption">🧾 Invoice PDF — diagonal watermark stamped across the document</div>
+        </div>
+        <div class="screenshot-card">
+            <img src="screen3_sale.png" alt="Sale Order Watermark"/>
+            <div class="caption">🛒 Sale Order PDF — watermark applied when printing quotations and orders</div>
+        </div>
+        <div class="screenshot-card">
+            <img src="screen4_purchase.png" alt="Purchase Order Watermark"/>
+            <div class="caption">🏭 Purchase Order PDF — watermark on vendor orders and RFQs</div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>How to Use</h2>
+    <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+            <h3>Configure in Settings</h3>
+            <ul>
+                <li>Go to <strong>Settings → PDF Watermark</strong></li>
+                <li>Tick the documents you want watermarked</li>
+                <li>Enter the watermark text (e.g. <strong>DRAFT</strong>)</li>
+                <li>Set color using hex code (e.g. <strong>#cc0000</strong> for red)</li>
+                <li>Click <strong>Save</strong></li>
+            </ul>
+        </div>
+    </div>
+    <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+            <h3>Print Any Document</h3>
+            <p>Open any Invoice, Sale Order or Purchase Order → click <strong>Print</strong> → the watermark appears automatically on every page of the PDF.</p>
+        </div>
+    </div>
+    <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+            <h3>Color Presets</h3>
+            <ul>
+                <li>Light Grey: <strong>#cccccc</strong></li>
+                <li>Red: <strong>#cc0000</strong></li>
+                <li>Blue: <strong>#0000cc</strong></li>
+                <li>Green: <strong>#006600</strong></li>
+                <li>Orange: <strong>#cc6600</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="cta">
+    <h2>Stop Sending Unmarked Documents!</h2>
+    <p style="color:#555; margin-bottom:16px;">Add professional watermarks to all your Odoo PDFs in seconds.</p>
+    <a href="mailto:magentodeveloper1993@gmail.com">Get Support</a>
+    <p style="margin-top:16px; font-size:12px; color:#999;">
+        Website: <a href="https://www.technicalrajni.com" style="color:#6c3fc5;">www.technicalrajni.com</a>
+        &nbsp;|&nbsp; Email: magentodeveloper1993@gmail.com
+    </p>
+</div>
+
+</body>
+</html>

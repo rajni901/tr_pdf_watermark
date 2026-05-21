@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_pdf_watermark" model="ir.ui.view">
+        <field name="name">res.config.settings.view.pdf.watermark</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='contacts_settings']" position="before">
+                <div id="pdf_watermark_settings">
+                    <h2>PDF Watermark</h2>
+                    <div class="row mt16 o_settings_container">
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Enable Watermark On</span>
+                                <div class="text-muted">
+                                    Choose which PDF reports get a watermark.
+                                </div>
+                                <div class="content-group mt-2">
+                                    <div class="row mt16">
+                                        <field name="tr_wm_invoice" class="col-1"/>
+                                        <label for="tr_wm_invoice" string="Invoices" class="col-4 o_form_label"/>
+                                        <field name="tr_wm_invoice_text" class="col-7"
+                                               invisible="not tr_wm_invoice"
+                                               placeholder="e.g. DRAFT"/>
+                                    </div>
+                                    <div class="row mt8">
+                                        <field name="tr_wm_sale" class="col-1"/>
+                                        <label for="tr_wm_sale" string="Sale Orders" class="col-4 o_form_label"/>
+                                        <field name="tr_wm_sale_text" class="col-7"
+                                               invisible="not tr_wm_sale"
+                                               placeholder="e.g. CONFIDENTIAL"/>
+                                    </div>
+                                    <div class="row mt8">
+                                        <field name="tr_wm_purchase" class="col-1"/>
+                                        <label for="tr_wm_purchase" string="Purchase Orders" class="col-4 o_form_label"/>
+                                        <field name="tr_wm_purchase_text" class="col-7"
+                                               invisible="not tr_wm_purchase"
+                                               placeholder="e.g. COPY"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Watermark Style</span>
+                                <div class="text-muted">
+                                    Customize the watermark color and opacity.
+                                </div>
+                                <div class="content-group mt-2">
+                                    <div class="row mt16">
+                                        <label class="col-lg-4 o_light_label" for="tr_wm_color" string="Color (Hex)"/>
+                                        <field name="tr_wm_color" class="col-lg-7"
+                                               placeholder="#cccccc"/>
+                                    </div>
+                                    <div class="mt-2" style="font-size:12px;">
+                                        <strong>Presets — copy &amp; paste:</strong><br/>
+                                        ⬜ Light Grey: <code>#cccccc</code><br/>
+                                        🔴 Red: <code>#cc0000</code><br/>
+                                        🔵 Blue: <code>#0000cc</code><br/>
+                                        🟠 Orange: <code>#cc6600</code><br/>
+                                        🟢 Green: <code>#006600</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
