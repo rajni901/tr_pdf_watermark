@@ -4,7 +4,7 @@
     'category': 'Technical',
     'summary': 'Add text watermarks to PDF reports — DRAFT, PAID, CONFIDENTIAL, CANCELLED or custom text. Works on Invoices, Sale Orders, Purchase Orders.',
     'description': """
-PDF Watermark — by Technical Rajni
+PDF Watermark — by Vayu Sharma
 ====================================
 Add diagonal text watermarks to any Odoo PDF report.
 
@@ -16,8 +16,8 @@ Features:
 - No extra libraries required
 - Configure from Settings in seconds
     """,
-    'author': 'Technical Rajni',
-    'website': 'https://www.technicalrajni.com',
+    'author': 'Vayu Sharma',
+    'website': '',
     'license': 'OPL-1',
     'depends': ['web', 'account', 'sale_management', 'purchase'],
     'data': [
